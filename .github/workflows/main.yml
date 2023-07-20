@@ -1,0 +1,42 @@
+on: push
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}   
+        password: ${{ secrets.FTP_PASSWORD }}
+        exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/assets/**
+            **/email_builder/**
+            **/uploads/**
+            **/fpdf181/**
+            **/fpdi2/src/**
+            **/hotspot/**
+            **/qr/vendor/**
+            **/qr/**
+            **/compress/**
+            **/assets/**
+            **/qr_files/**
+            **/resp/**
+            **/xero/**
+            **/builderjs/**
+            **/wsp_rad_tools/Ready to go RAD Snippets _ WSP RAD Documentation_files/**
+            **/wsp_rad_tools/import city state country/**
+            **/wsp_rad/libs/**
+            **/wsp_rad/assets/**
+            **/wsp_rad/config/**
+            **/wsp_rad/controllers/**
+            **/wsp_rad/default_api/**
+            **/wsp_rad/logs/**
