@@ -125,7 +125,7 @@
                                 <h4 class="title mb--20 widget-title">Get in touch</h4>
                                 <span class="address mb--20">8212 E. Glen Creek Street Orchard Park, NY 14127, United States of America</span>
                                 <span class="phone">Phone: <b>+123 456 7890</b></span>
-                                <span class="email">Email: <b>Hello@etrade.com</b></span>
+                                <span class="email">Email: <b>info@etrade.com</b></span>
                             </div>
                         </div>
                     </div>
